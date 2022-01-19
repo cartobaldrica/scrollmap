@@ -1,175 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Drinking Water</title>
+    <title>Scrollmap Demo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     
-    <style>
-        .title{
-            margin-bottom:100px;
-        }
-        #content{
-            overflow:visible !important;
-        }
-        .scroll-container{
-            display:block;
-        }
-        .background-item{
-            width:100%;
-            height:100%;
-            z-index:-1;
-            position:sticky;
-            display:block;
-            top:0;
-        }
-        .foreground-item{
-            width:50%;
-            position:relative;
-        }
-        p{
-            font-size:20px;
-            margin-bottom:300px;
-        }
-    </style>
-
 </head>
 <body>
-    <div id="content" class="col-xl-12">
-        <div class="title">
-            <h1>Story Title</h1>
+    <div id="content">
+        <div class="row">
+            <div class="center title">
+                <h1>Story Title</h1>
+                <p class="author">Author</p>
+            </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
+            <div class="center">
+                <p>It is estimated that <b>143</b> mussel species are native to the Mississippi Basin.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <img class="story-img" src="img/pearl_woman.jpg">
+            </div>
+            <div class="right">
+                <p>A Kansas newspaper notice of a prominent pearl sold in Pairie du Chien, Wisconsin.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="right">
+                <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+            </div>
+        </div>
+
         <div class="scroll-container">    
-            <div class="scene" id="scene1" style="margin-bottom:500px;">
-                <div class="background-item" id="item1" style="background:red;">
-
+            <div class="background-item" id="item1" style="background:red;"></div>
+            <div class="foreground-item" id="f-item1">
+                <div class="row">
+                    <div class="center">
+                        <p>It is estimated that <b>143</b> mussel species are native to the Mississippi Basin.</p>
+                    </div>
                 </div>
-                <div class="foreground-item" id="f-item1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="row">
+                    <div class="left">
+                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    </div>
+                    <div class="right">
+                        <p>A Kansas newspaper notice of a prominent pearl sold in Pairie du Chien, Wisconsin.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="scene" id="scene2">
-                <div class="background-item" id="item2" style="background:green;">
-
+                <div class="row">
+                    <div class="right">
+                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    </div>
                 </div>
-                <div class="foreground-item" id="f-item2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="row">
+                    <div class="left">
+                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="scroll-container">    
+            <div class="background-item" id="item2" style="background:green;"></div>
+            <div class="foreground-item" id="f-item2">
+                <div class="row">
+                    <div class="center">
+                        <p>It is estimated that <b>143</b> mussel species are native to the Mississippi Basin.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">
+                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    </div>
+                    <div class="right">
+                        <p>A Kansas newspaper notice of a prominent pearl sold in Pairie du Chien, Wisconsin.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="right">
+                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">
+                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-<script type="text/javascript">
-    $(document).ready(function(){  
-        var height = $(window).height();
-        $('.background-item').height(height);
+<script type="text/javascript" src="js/scrollmap.js"></script>
+<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
 
-        var b_itemHeights = [];
-        var f_itemHeights = [];
-        var s_itemHeights = [];
-        var b_items = $(".background-item");
-        var f_items = $(".foreground-item");
-        var oldIndex;
-        var index;
-
-        var scenes = $(".scene");
-
-        for (var i = 0; i < b_items.length; i++){
-            b_itemHeights[i] = $(b_items[i]).height();
-            f_itemHeights[i] = $(f_items[i]).height() + $(f_items[i]).offset().top;
-            s_itemHeights[i] = $(scenes[i]).offset().top;
-        }
-
-        $(document).scroll(function(){
-            var docViewTop = $(window).scrollTop();
-            var docViewBottom = docViewTop + $(window).height();
-
-            /*if (docViewTop >= s_itemHeights[0]){
-                $(b_items[0]).css("position","fixed").css("top",0);
-                $(f_items[0]).css("margin-top",b_itemHeights[0]);
-            }
-            if (docViewTop >= f_itemHeights[0]){
-                $(scenes[0]).css("visibility","hidden");
-                $(scenes[1]).css("visibility","visible")
-
-                $(b_items[1]).css("position","fixed").css("top",1);
-                $(f_items[1]).css("margin-top",b_itemHeights[1]);
-            }
-            if (docViewTop >= f_itemHeights[0]){
-
-            }*/
-
-        });
-
-        function floatScroll(){
-            $(b_items[index]).css("position","fixed").css("top",0);
-        }
-        
-        function checkScroll(elem){
-            if (isScrolledIntoView(elem)){
-                var pos = $(elem).position();
-
-                //$(elem).css("position","absolute");
-            }
-            else{
-                $(elem).css("position","block");
-            }   
-        }
-
-        function isScrolledIntoView1(elem){
-            var docViewTop = $(window).scrollTop();
-            var docViewBottom = docViewTop + $(window).height();
-
-            var elemTop = $(elem).offset().top;
-            var elemBottom = elemTop + $(elem).height();
-
-            return ((elemTop >= docViewTop) && (elemBottom <= docViewBottom)/* && (docViewBottom <= (elemTop + block))*/);
-        }
-        function isScrolledIntoView2(elem){
-            var docViewTop = $(window).scrollTop();
-            var docViewBottom = docViewTop + $(window).height();
-
-            var elemTop = $(elem).offset().top;
-            var elemBottom = elemTop + $(elem).height();
-
-            return ((elemBottom <= docViewBottom));
-        }
-    })
-
-
-</script>
 </body>
 </html>
