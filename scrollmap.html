@@ -8,10 +8,11 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/leaflet.css">
     
 </head>
 <body>
-    <div id="content">
+    <div class="content">
         <div class="row">
             <div class="center title">
                 <h1>Story Title</h1>
@@ -24,11 +25,16 @@
             </div>
         </div>
         <div class="row">
+            <div class="center-wide">
+                <p>It is estimated that <b>143</b> mussel species are native to the Mississippi Basin.</p>
+            </div>
+        </div>
+        <div class="row">
             <div class="left">
-                <img class="story-img" src="img/pearl_woman.jpg">
+                <div id="chart"></div>
             </div>
             <div class="right">
-                <p>A Kansas newspaper notice of a prominent pearl sold in Pairie du Chien, Wisconsin.</p>
+                <p class="vert-center">A Kansas newspaper notice of a prominent pearl sold in Pairie du Chien, Wisconsin.</p>
             </div>
         </div>
         <div class="row">
@@ -43,29 +49,28 @@
         </div>
 
         <div class="scroll-container">    
-            <div class="background-item" id="item1" style="background:red;"></div>
-            <div class="foreground-item" id="f-item1">
+            <div class="background-item" id="item1" style="background:red;">
+                <div id="backgroundMap"></div>
+            </div>
+            <div class="foreground-item no-event" id="f-item1">
                 <div class="row">
-                    <div class="center">
-                        <p>It is estimated that <b>143</b> mussel species are native to the Mississippi Basin.</p>
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">It is estimated that <b>143</b> mussel species are native to the Mississippi Basin.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="left">
-                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
-                    </div>
-                    <div class="right">
-                        <p>A Kansas newspaper notice of a prominent pearl sold in Pairie du Chien, Wisconsin.</p>
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin">However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="right">
-                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    <div class="right background-transparent rounded">
+                        <p class="no-margin">However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="left">
-                        <p>However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin">However, a single freshwater pearl could fetch anywhere from a few cents, to hundreds, even thousands of dollars. Particularly large, or colorful pearls were often announced in newspapers, sometimes several states away.</p>
                     </div>
                 </div>
             </div>
@@ -102,8 +107,9 @@
     </div>
 
 <script type="text/javascript" src="js/scrollmap.js"></script>
-<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+<script type="text/javascript" src="lib/leaflet.js"></script>
 <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/d3.min.js"></script>
 
 </body>
 </html>

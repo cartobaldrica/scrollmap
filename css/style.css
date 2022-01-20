@@ -1,6 +1,6 @@
 
-#content{
-    overflow:visible !important;
+body{
+    overflow-x:hidden;
 }
 .scroll-container{
     display:block;
@@ -10,7 +10,7 @@
 .background-item{
     width:100%;
     height:100vh;
-    z-index:-1;
+    z-index:0;
     position:sticky;
     display:block;
     top:0;
@@ -21,8 +21,11 @@
 }
 
 /*positioning*/
-.center{
+.center, .center-wide{
     text-align:center;
+}
+.full-width{
+    width:100%;
 }
 
 /*title*/
@@ -44,6 +47,8 @@
 /*bottom margin styles*/
 .row{
     margin-bottom:50%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
 }
 .no-margin{
     margin-bottom:0;
@@ -53,4 +58,28 @@
 }
 .sm-margin{
     margin-bottom:25%;
+}
+
+/*block styles*/
+.rounded{
+    border-radius:10%;
+}
+.background-white{
+    background-color:white;
+    padding:20px;
+}
+.background-transparent{
+    background-color:rgba(255,255,255,0.8);
+    padding:20px;
+}
+
+/*interactions*/
+.no-event{
+    pointer-events:none;
+}
+
+/*temp*/
+#map, #backgroundMap{
+    height:100vh;
+    width:100vw;
 }
