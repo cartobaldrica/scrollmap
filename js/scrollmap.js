@@ -80,6 +80,15 @@ function vertCenter(){
         div.style.marginTop = (pHeight - cHeight)/2 + "px";
     });
 }
+//center element vertically within the page
+function vertCenter(){
+    document.querySelectorAll('.vert-center-page').forEach(div =>{
+        var height = document.documentElement.clientHeight,
+            cHeight = div.clientHeight;
+
+        div.style.marginTop = (height - cHeight)/2 + "px";
+    });
+}
 //resize background elements
 function resizeBackround(){
     var width = document.documentElement.clientWidth;
