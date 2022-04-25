@@ -44,7 +44,7 @@ Classes for horizontally positioning divs.
 
 `vert-center`: Vertically center an element within a block. 
 
-### License
+## License
 
 Copyright © 2022 cartobaldrica
 
