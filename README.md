@@ -1,5 +1,9 @@
 # SCROLLMAP
 
+## Demo
+
+[Demo with Leaflet](examples/example1.html)
+
 ## Documentation
 
 ### Content classes
