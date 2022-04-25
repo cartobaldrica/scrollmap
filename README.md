@@ -4,7 +4,7 @@ An HTML wrapper/extremely lightweight javascript library for creating scrolling 
 
 ## Demo
 
-[Demo with Leaflet](examples/example1.html)
+[Demo with Leaflet](https://cartobaldrica.github.io/scrollmap/examples/example1.html)
 
 ## Documentation
 
