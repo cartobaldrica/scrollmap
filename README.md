@@ -1,5 +1,7 @@
 # SCROLLMAP
 
+An HTML wrapper/extremely lightweight javascript library for creating scrolling storymaps. Includes options to create a
+
 ## Demo
 
 [Demo with Leaflet](examples/example1.html)
