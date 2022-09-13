@@ -55,15 +55,57 @@
             div.width = width + 'px !important';
         });
     }
+    //function for a smooth transition between background elements
+    function backgroundTransition(){
+        document.querySelectorAll(".scroll-container").forEach(function(scrollContainer){
+            let foreground = scrollContainer.children[1],
+                background = scrollContainer.children[0],
+                foregroundItems = [];
+            //add individual foreground items to the array
+            foreground.childNodes.forEach(function(child){
+                if (child.nodeName == "DIV"){
+                    foregroundItems.push(child);
+                }
+            })
+            //if there is more than one background item, activate scroll listener
+            if(background.children.length > 1){
+                background.childNodes.forEach(function(child){
+                    //if the element is not a "text" element
+                    if (child.nodeName != "#text"){
+                        //retrieve data-slide value to get the foreground item
+                        let id = child.dataset.slide ? child.dataset.slide : 0;
+                        //activate listener for each background item
+                        document.addEventListener("scroll",function(){
+                            //position at the bottom of the screen
+                            let scrollPos = window.scrollY + (window.innerHeight) - foregroundItems[id].clientHeight,
+                            //position of the select foreground item
+                                foreGroundOffset = foregroundItems[id].offsetParent.offsetTop + foregroundItems[id].offsetTop;
+                            //if the current scroll position is greater than the bottom position of the foreground element
+                            if (scrollPos > foreGroundOffset){
+                                if (child.previousElementSibling)
+                                    child.previousElementSibling.classList.add("hidden");
+                                if (child.nextElementSibling)
+                                    child.nextElementSibling.classList.add("hidden");
+                                child.classList.remove("hidden");
+                                vertCenter();
+                            }  
+                        })
+                    }
+                })
+            }
+        })
+    }
     //functions to fire on resize
     function resize(){
         rightPosition();
         vertCenter();
         positionTitle();
         resizeBackround();
+        backgroundTransition();
     }
 
     document.addEventListener('DOMContentLoaded', resize);
+    document.addEventListener('scroll', vertCenter);
     window.addEventListener('resize', resize);
 
 })();

@@ -1,0 +1,120 @@
+<!--
+    carousel example
+    mapbox studio example
+    arcgis online example
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scrollmap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <link rel="stylesheet" href="../dist/scrollmap.css">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="content">
+        <div class="row" style="background-image:url(img/title.png)">
+            <div class="center title">
+                <h1>Pumpkin Patch</h1>
+                <p class="author">Gareth Baldrica-Franklin</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="center">
+                <p>My style is called <b>Pumpkin Patch</b> and is based on the Fall season.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="left">
+                <p class="vert-center">In the map, pumpkins represent cities, and leaves highways.</p>
+            </div>
+            <div class="right">
+                <img class="full-width" src="img/img1.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="center-wide">
+                <p>The map "decays" as you zoom in.</p>
+                <!--slideshow of images, also known as a carousel-->
+                <!--remove "carousel-dark" if you want a lighter version of the carousel-->
+                <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <!--indicator buttons at the bottom of the carousel that show the total number of slides-->
+                    <div class="carousel-indicators">
+                        <!--there should be as many of these buttons as there are slides in your carousel-->
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <!--images in the carousel-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slide1.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide2.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide3.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide4.png" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide5.png" class="w-100" alt="...">
+                        </div>
+                    </div>
+                    <!--previous/next buttons that allow users to click from one slide to the next-->
+                    <button id="prev-button" class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button id="next-button" class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-container">    
+            <div class="background-item">
+                <img src="img/background.png" data-slide="0" class="full-width vert-center"></iframe>
+                <img src="img/background2.png" data-slide="1" class="full-width vert-center hidden"></iframe>
+            </div>
+            <div class="foreground-item no-event">
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">But this style didn't always look like this.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin">When I first created this style, it was all in black and white.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--mapbox iframe-->
+        <div class="row">
+            <div class="center-wide">
+                <p>Play around the full map.</p>
+                <iframe src="https://api.mapbox.com/styles/v1/gbaldrica/ckgh1wbo509uq19paosz0h2it.html?fresh=true&title=copy&access_token=pk.eyJ1IjoiZ2JhbGRyaWNhIiwiYSI6ImNqZnlkeGtkbTRsYTEycXBvYWhvNHl6dHQifQ.gbIkzk7MVT9R9kPcPenRsA#5.75/46.235/-119.135/0/5" class="full-width half-height" style="height:500px;"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src="../dist/scrollmap.js"></script>
+<script type="text/javascript" src="../lib/bootstrap.min.js"></script>
+
+</body>
+</html>
