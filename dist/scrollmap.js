@@ -71,8 +71,9 @@
             if(background.children.length > 1){
                 background.childNodes.forEach(function(child){
                     //if the element is not a "text" element
-                    if (child.nodeName != "#text"){
+                    if (child.nodeName != "#text" && child.nodeName != "#comment"){
                         //retrieve data-slide value to get the foreground item
+                        console.log(child)
                         let id = child.dataset.slide ? child.dataset.slide : 0;
                         //activate listener for each background item
                         document.addEventListener("scroll",function(){

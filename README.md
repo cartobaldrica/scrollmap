@@ -44,6 +44,12 @@ Classes for horizontally positioning divs.
 
 `vert-center`: Vertically center an element within a block. 
 
+`no-margin`: No margin beneath an element. 
+
+`sm-margin`: 25% margin beneath an element. 
+
+`lg-margin`: 100% margin beneath an element. 
+
 ## License
 
 Copyright © 2022 cartobaldrica
