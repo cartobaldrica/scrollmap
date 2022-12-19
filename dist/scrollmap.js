@@ -57,6 +57,7 @@
     }
     //function for a smooth transition between background elements
     function backgroundTransition(){
+        let transition = false;
         document.querySelectorAll(".scroll-container").forEach(function(scrollContainer){
             let foreground = scrollContainer.children[1],
                 background = scrollContainer.children[0],
@@ -73,21 +74,26 @@
                     //if the element is not a "text" element
                     if (child.nodeName != "#text" && child.nodeName != "#comment"){
                         //retrieve data-slide value to get the foreground item
-                        console.log(child)
-                        let id = child.dataset.slide ? child.dataset.slide : 0;
+                        let id = child.dataset.slide ? child.dataset.slide : 0,
+                            nextId = child.nextElementSibling ? child.nextElementSibling.dataset.slide : null;
                         //activate listener for each background item
                         document.addEventListener("scroll",function(){
                             //position at the bottom of the screen
                             let scrollPos = window.scrollY + (window.innerHeight) - foregroundItems[id].clientHeight,
                             //position of the select foreground item
-                                foreGroundOffset = foregroundItems[id].offsetParent.offsetTop + foregroundItems[id].offsetTop;
+                                foreGroundOffset = foregroundItems[id].offsetParent.offsetTop + foregroundItems[id].offsetTop,
+                            //position of the next foreground item
+                                foreGroundBottom = nextId ? foregroundItems[nextId].offsetParent.offsetTop + foregroundItems[nextId].offsetTop : document.querySelector("body").offsetHeight;
                             //if the current scroll position is greater than the bottom position of the foreground element
-                            if (scrollPos > foreGroundOffset){
-                                if (child.previousElementSibling)
-                                    child.previousElementSibling.classList.add("hidden");
-                                if (child.nextElementSibling)
-                                    child.nextElementSibling.classList.add("hidden");
-                                child.classList.remove("hidden");
+                            if (scrollPos > foreGroundOffset && scrollPos < foreGroundBottom){
+                                if (child.classList.contains("hidden")){
+                                    if (child.previousElementSibling)
+                                        child.previousElementSibling.classList.add("hidden");
+                                    if (child.nextElementSibling)
+                                        child.nextElementSibling.classList.add("hidden");
+
+                                    child.classList.remove("hidden");
+                                }
                                 vertCenter();
                             }  
                         })
