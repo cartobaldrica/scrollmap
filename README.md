@@ -1,9 +1,138 @@
 # SCROLLMAP
 
-An HTML wrapper/extremely lightweight javascript library for creating scrolling storymaps. 
+An HTML wrapper/lightweight javascript library for creating scrolling storymaps. This library was developed for and used in _Geography 572: Graphic Design in Cartography_ at University of Wisconsin—Madison.
+
 ## Demo
 
 [Demo with Leaflet](https://cartobaldrica.github.io/scrollmap/examples/example1.html)
+
+## Examples
+
+These examples are from UW-Madison students who created storymaps using Scrollmap in Fall 2022.
+
+[Kiki's Delivery Service](https://smichalski3.github.io/portfolio/kikis-delivery.html) by Sophie Michalski ([portfolio](https://smichalski3.github.io/portfolio/index.html))
+
+[Faience Map](https://htpurisch.github.io/web_portfolio/scrollmap_demo/scrollmap.html) by Hans Purisch ([portfolio](https://htpurisch.github.io/web_portfolio/))
+
+[22, a map](https://jake-steinberg.github.io/portfolio/22map.html) by Jake Steinberg ([portfolio](https://jake-steinberg.github.io/portfolio/index.html))
+
+[Slippy Postal Map](https://sid-rcs.github.io/scrolly-map/) by Chinna Subbaraya Siddharth (Sid) Ramavajjala ([portfolio](https://sid-rcs.github.io/maps/))
+
+## How to Use
+
+### Basics
+
+Once you install scrollmap.js and scrollmap.css from the Github Repo, and link to them on an HTML page, start by creating a `div` with a class `content`.
+
+`<div class = "content">`
+
+To add content to a story, add a `div` class `row`. 
+
+`<div class = "content">`
+    `<div class = "row">`
+    `</div>`
+`</div>`
+
+Individual content blocks are `divs` with position classes. For example, the `center` class will create a centered content block on desktop.
+
+`<div class = "content">`
+    `<div class = "row">`
+        `<div class = "center">`
+            `//insert content here`
+        `</div>`
+    `</div>`
+`</div>`
+
+`left` and `right` positioned content `divs` can be placed side-by-side.
+
+`<div class = "content">`
+    `<div class = "row">`
+        `<div class = "left">`
+            `//left content`
+        `</div>`
+         `<div class = "right">`
+            `//right content`
+        `</div>`
+    `</div>`
+`</div>`
+
+### Sidecar
+
+Basic content classes are easy to easy to use, but they are somewhat limited. A _sidecar_ fixes content to the background, and then scrolls other content atop it. This example uses `img` elements, but any HTML elements can be used. 
+
+Unlike basic content, which uses the `row` class, `sidecar` elements use the `scroll-container` class. Within the `scroll-container` class, a sidecar has a `background-item` div and a `foreground-item` div. 
+
+`<div class = "content">`
+    `<div class = "scroll-container">`
+        `<div class = "background-item">`
+            `//background items`
+        `</div>`
+        `<div class = "foreground-item">`
+            `//foreground items`
+        `</div>`
+    `</div>`
+`</div>`
+
+At its most basic, a `background-item` can simply be an `img`
+
+`<div class = "background-item">`
+    `<img src="img/background.png">`
+`</div>`
+
+On the other hand, a `foreground-item` contains any number of basic content blocks.
+
+`<div class = "foreground-item">`
+    `<div class = "row">`
+        `<div class = "center">`
+            `//insert content here`
+        `</div>`
+    `</div>`
+ `</div>`
+
+ So, the following script would scroll the two foreground items that scroll over a background image.
+
+`<div class = "content">`
+    `<div class = "scroll-container">`
+        `<div class = "background-item">`
+            `<img src="img/background.png">`
+        `</div>`
+        `<div class = "foreground-item">`
+            `<div class = "row">`
+                `<div class = "center">`
+                    `//insert content here`
+                `</div>`
+            `</div>`
+            `<div class = "row">`
+                `<div class = "left">`
+                    `//insert content here`
+                `</div>`
+            `</div>`
+        `</div>`
+    `</div>`
+`</div>`
+
+If, in the previous example, you wanted a new background image to correspond with the second `row` `class` (the `row` that contained a `left` div), you can use the `data-slide` property. `data-slide` links an item in the background to an item in the foreground. 
+
+In the below example, the first `img` in the background appears with the first `div` in the foreground, and the second background `img` appears with the second `div`.
+
+`<div class = "background-item">`
+    `<img src="img/background.png" data-slide="0">`
+    `<img src="img/background2.png" data-slide="1">`
+`</div>`
+`<div class = "foreground-item">`
+    `<div class = "row">`
+        `<div class = "center">`
+            `//insert content here`
+        `</div>`
+    `</div>`
+    `<div class = "row">`
+        `<div class = "left">`
+            `//insert content here`
+        `</div>`
+    `</div>`
+`</div>`
+
+The `data-slide` property essentially allows you have longer sidecars with multiple background and foreground items.
 
 ## Documentation
 
@@ -13,7 +142,7 @@ An HTML wrapper/extremely lightweight javascript library for creating scrolling 
 
 `row`: Class for organizing blocks of scrolling content. Required as a parent class for block positioning classes and as a child of the `foreground-item` class.
 
-### Scroll Container
+### Sidecar
 
 Series of upper-level classes to create a sidecar effect, where content scrolls over a fixed background.
 
@@ -38,6 +167,12 @@ Classes for horizontally positioning divs.
 ### Title Class
 
 `title`: Vertically center all child elements of a block to create a title effect. 
+
+### Size Classes
+
+`fit`: Set width to 100% of the parent container. This can be used to constrain the width of images to the width of their parent blocks.
+
+`fill`: Set height to 100% of the parent container. This can be used to set an image to the height of the browser.
 
 ### Other Classes
 

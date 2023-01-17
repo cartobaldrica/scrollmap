@@ -57,7 +57,6 @@
     }
     //function for a smooth transition between background elements
     function backgroundTransition(){
-        let transition = false;
         document.querySelectorAll(".scroll-container").forEach(function(scrollContainer){
             let foreground = scrollContainer.children[1],
                 background = scrollContainer.children[0],
@@ -93,6 +92,10 @@
                                         child.nextElementSibling.classList.add("hidden");
 
                                     child.classList.remove("hidden");
+                                }
+                                //if last image is longer than the viewport height, add margin to scroll container
+                                if (!nextId){
+                                    scrollContainer.style.marginBottom = child.offsetHeight - background.offsetHeight + "px";
                                 }
                                 vertCenter();
                             }  
