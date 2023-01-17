@@ -24,37 +24,45 @@ These examples are from UW-Madison students who created storymaps using Scrollma
 
 Once you install scrollmap.js and scrollmap.css from the Github Repo, and link to them on an HTML page, start by creating a `div` with a class `content`.
 
-`<div class = "content">`
+```
+<div class = "content">
+```
 
 To add content to a story, add a `div` class `row`. 
 
-`<div class = "content">`
-    `<div class = "row">`
-    `</div>`
-`</div>`
+```
+<div class = "content">
+    <div class = "row">
+    </div>
+</div>
+```
 
 Individual content blocks are `divs` with position classes. For example, the `center` class will create a centered content block on desktop.
 
-`<div class = "content">`
-    `<div class = "row">`
-        `<div class = "center">`
-            `//insert content here`
-        `</div>`
-    `</div>`
-`</div>`
+```
+<div class = "content">
+    <div class = "row">
+        <div class = "center">
+            //insert content here
+        </div>
+    </div>
+</div>
+```
 
 `left` and `right` positioned content `divs` can be placed side-by-side.
 
-`<div class = "content">`
-    `<div class = "row">`
-        `<div class = "left">`
-            `//left content`
-        `</div>`
-         `<div class = "right">`
-            `//right content`
-        `</div>`
-    `</div>`
-`</div>`
+```
+<div class = "content">
+    <div class = "row">
+        <div class = "left">
+            //left content
+        </div>
+        <div class = "right">
+            //right content
+        </div>
+    </div>
+</div>
+```
 
 ### Sidecar
 
@@ -62,75 +70,85 @@ Basic content classes are easy to easy to use, but they are somewhat limited. A 
 
 Unlike basic content, which uses the `row` class, `sidecar` elements use the `scroll-container` class. Within the `scroll-container` class, a sidecar has a `background-item` div and a `foreground-item` div. 
 
-`<div class = "content">`
-    `<div class = "scroll-container">`
-        `<div class = "background-item">`
-            `//background items`
-        `</div>`
-        `<div class = "foreground-item">`
-            `//foreground items`
-        `</div>`
-    `</div>`
-`</div>`
+```
+<div class = "content">
+    <div class = "scroll-container">
+        <div class = "background-item">
+            //background items
+        </div>
+        <div class = "foreground-item">
+            //foreground items
+        </div>
+    </div>
+</div>
+```
 
 At its most basic, a `background-item` can simply be an `img`
 
-`<div class = "background-item">`
-    `<img src="img/background.png">`
-`</div>`
+```
+<div class = "background-item">
+    <img src="img/background.png">
+</div>
+```
 
 On the other hand, a `foreground-item` contains any number of basic content blocks.
 
-`<div class = "foreground-item">`
-    `<div class = "row">`
-        `<div class = "center">`
-            `//insert content here`
-        `</div>`
-    `</div>`
- `</div>`
+```
+<div class = "foreground-item">
+    <div class = "row">
+        <div class = "center">
+            //insert content here
+        </div>
+    </div>
+ </div>
+ ```
 
  So, the following script would scroll the two foreground items that scroll over a background image.
 
-`<div class = "content">`
-    `<div class = "scroll-container">`
-        `<div class = "background-item">`
-            `<img src="img/background.png">`
-        `</div>`
-        `<div class = "foreground-item">`
-            `<div class = "row">`
-                `<div class = "center">`
-                    `//insert content here`
-                `</div>`
-            `</div>`
-            `<div class = "row">`
-                `<div class = "left">`
-                    `//insert content here`
-                `</div>`
-            `</div>`
-        `</div>`
-    `</div>`
-`</div>`
+```
+<div class = "content">
+    <div class = "scroll-container">
+        <div class = "background-item">
+            <img src="img/background.png">
+        </div>
+        <div class = "foreground-item">
+            <div class = "row">
+                <div class = "center">
+                    //insert content here
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "left">
+                    //insert content here
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
 
 If, in the previous example, you wanted a new background image to correspond with the second `row` `class` (the `row` that contained a `left` div), you can use the `data-slide` property. `data-slide` links an item in the background to an item in the foreground. 
 
 In the below example, the first `img` in the background appears with the first `div` in the foreground, and the second background `img` appears with the second `div`.
 
-`<div class = "background-item">`
-    `<img src="img/background.png" data-slide="0">`
-    `<img src="img/background2.png" data-slide="1">`
-`</div>`
-`<div class = "foreground-item">`
-    `<div class = "row">`
-        `<div class = "center">`
-            `//insert content here`
-        `</div>`
-    `</div>`
-    `<div class = "row">`
-        `<div class = "left">`
-            `//insert content here`
-        `</div>`
-    `</div>`
-`</div>`
+```
+<div class = "background-item">
+    <img src="img/background.png" data-slide="0">
+    <img src="img/background2.png" data-slide="1">
+</div>
+<div class = "foreground-item">
+    <div class = "row">
+        <div class = "center">
+            //insert content here
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "left">
+            //insert content here
+        </div>
+    </div>
+</div>
+```
 
 The `data-slide` property essentially allows you have longer sidecars with multiple background and foreground items.
 
