@@ -4,7 +4,9 @@ An HTML wrapper/lightweight javascript library for creating scrolling storymaps.
 
 ## Demo
 
-[Demo with Leaflet](https://cartobaldrica.github.io/scrollmap/examples/example1.html)
+[Basic Demo](https://cartobaldrica.github.io/scrollmap/examples/example572.html)
+
+[Demo with Leaflet](https://cartobaldrica.github.io/scrollmap/examples/exampleLeaflet.html)
 
 ## Examples
 
