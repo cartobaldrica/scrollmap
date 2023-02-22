@@ -6,8 +6,6 @@ An HTML wrapper/lightweight javascript library for creating scrolling storymaps.
 
 [Basic Demo](https://cartobaldrica.github.io/scrollmap/examples/example572.html)
 
-[Demo with Leaflet](https://cartobaldrica.github.io/scrollmap/examples/exampleLeaflet.html)
-
 ## Examples
 
 These examples are from UW-Madison students who created storymaps using Scrollmap in Fall 2022.
