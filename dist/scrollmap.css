@@ -21,7 +21,7 @@ body{
     padding-bottom:50%;
 }
 .hidden{
-    display:none;
+    display:none !important;
 }
 
 /*positioning*/
