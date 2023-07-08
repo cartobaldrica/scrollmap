@@ -112,6 +112,81 @@ body{
     to {opacity: 1;} 
  } 
 
+/*slideshow*/
+/*slideshow container */
+.slideshow-container {
+    width:100%;
+    position: relative;
+    margin: auto;
+}
+
+/* hide the images by default */
+.slide {
+    display: none;
+}
+
+/* next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 30px);
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* position next button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* position prev button to the left */
+.prev{
+    left: 0;
+}
+
+/* hover styling for next/prev buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+}
+
+/* image captions */
+.caption {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    background:rgba(0,0,0,0.3)
+}
+
+/* the dots/bullets/indicators */
+.slideshow-dots{
+    text-align:center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 15px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
 
 @media screen and (min-width: 1200px) {
     .center{
@@ -202,6 +277,12 @@ body{
     }
     .foreground-item > .row{
         margin-bottom:100%;
+    }
+    /*move slideshow caption*/
+    .caption{
+        top:100%;
+        background:none;
+        color:black;
     }
 }
 
