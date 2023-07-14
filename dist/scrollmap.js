@@ -43,8 +43,10 @@
         document.querySelectorAll('.vert-center').forEach(div =>{
             var height = div.clientHeight,
                 pHeight = div.parentNode.clientHeight;
+
+            console.log("calc(50% - " + (height/2) + ")")
                 
-            div.style.marginTop = (pHeight/2) - (height/2) + "px";
+            div.style.marginTop = "calc(50% - " + height + "px)";
         });
     }
     //resize background elements

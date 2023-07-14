@@ -5,7 +5,6 @@ body{
 .scroll-container{
     display:block;
 }
-
 /*background/foreground*/
 .background-item{
     width:100%;
@@ -28,6 +27,9 @@ body{
 .center, .center-wide{
     text-align:center;
 }
+.left, .right-inline{
+    display:inline-block;
+}
 .half-width{
     width:50%;
 }
@@ -45,6 +47,9 @@ body{
 .title{
     height:100vh;   
 }
+.title > * {
+    display:inline-block;
+}
 .title h1{
     font-size:100px;
 }
@@ -52,8 +57,6 @@ body{
 /*bottom margin styles*/
 .row{
     margin-bottom:30%;
-    padding-right: var(--bs-gutter-x,.75rem);
-    padding-left: var(--bs-gutter-x,.75rem);
 }
 
 /*smaller bottom margin for rows in the foreground*/
@@ -62,6 +65,7 @@ body{
 }
 .no-margin{
     margin-bottom:0 !important;
+    margin-top:0 !important;
 }
 .lg-margin{
     margin-bottom:100% !important;
@@ -72,7 +76,7 @@ body{
 
 /*block styles*/
 .rounded{
-    border-radius:10%;
+    border-radius:2%;
 }
 .background-white{
     background-color:white;
@@ -164,7 +168,7 @@ body{
 .caption {
     color: #f2f2f2;
     font-size: 20px;
-    padding: 8px 12px;
+    padding: 8px 0px;
     position: absolute;
     bottom: 50px;
     width: 100%;
@@ -215,6 +219,8 @@ body{
     }
     .right-inline{
         width: 41.66666667% !important;
+        margin-left:20px;
+        position:absolute;
     }
 }
     @media screen and (min-width: 720px) and (max-width: 1199px) {
@@ -230,16 +236,19 @@ body{
     }
     .left{
         flex: 0 0 auto;
-        width: 50% !important;
+        margin-left:5%;
+        width: 45% !important;
     }
     .right{
         flex: 0 0 auto;
         margin-left:50%;
-        width: 50% !important;
+        width: 45% !important;
     }
     .right-inline{
         flex: 0 0 auto;
-        width: 50% !important;
+        margin-left:20px;
+        width: 45% !important;
+        position:absolute;
     }
 
 }
@@ -251,16 +260,18 @@ body{
     }
     .left{
         flex: 0 0 auto;
-        width: 50% !important;
+        width: 48% !important;
     }
     .right{
         flex: 0 0 auto;
         margin-left:50%;
-        width: 50% !important;
+        width: 48% !important;
     }
     .right-inline{
         flex: 0 0 auto;
-        width: 50% !important;
+        width: 48% !important;
+        margin-left:10px;   
+        position:absolute;
     }
 }
 @media screen and (max-width: 539px) {
@@ -287,5 +298,8 @@ body{
         top:100%;
         background:none;
         color:black;
+    }
+    .vert-center{
+        margin-top:0px !important;
     }
 }
