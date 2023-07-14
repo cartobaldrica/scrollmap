@@ -133,8 +133,8 @@ In the below example, the first `img` in the background appears with the first `
 
 ```
 <div class = "background-item">
-    <img src="img/background.png" data-slide="0">
-    <img src="img/background2.png" data-slide="1">
+    <img src="img/background.png" data-slide="1">
+    <img src="img/background2.png" data-slide="2">
 </div>
 <div class = "foreground-item">
     <div class = "row">

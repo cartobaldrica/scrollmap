@@ -156,6 +156,10 @@ body{
     color:white;
 }
 
+.slide > img{
+    width:100%;
+}
+
 /* image captions */
 .caption {
     color: #f2f2f2;
@@ -284,13 +288,4 @@ body{
         background:none;
         color:black;
     }
-}
-
-/*bootstrap carousel control*/
-#next-button, #prev-button{
-    background:rgba(0,0,0,0.1) !important;
-    width:75px;
-}
-#next-button:hover, #prev-button:hover{
-    background:rgba(0,0,0,0.2)
 }

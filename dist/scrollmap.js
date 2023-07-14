@@ -73,8 +73,8 @@
                     //if the element is not a "text" element
                     if (child.nodeName != "#text" && child.nodeName != "#comment"){
                         //retrieve data-slide value to get the foreground item
-                        let id = child.dataset.slide ? child.dataset.slide : 0,
-                            nextId = child.nextElementSibling ? child.nextElementSibling.dataset.slide : null;
+                        let id = child.dataset.slide ? child.dataset.slide - 1 : 0,
+                            nextId = child.nextElementSibling ? child.nextElementSibling.dataset.slide - 1 : null;
                         //activate listener for each background item
                         document.addEventListener("scroll",function(){
                             //position at the bottom of the screen
