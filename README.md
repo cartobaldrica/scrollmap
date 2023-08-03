@@ -200,6 +200,8 @@ Classes for horizontally positioning divs.
 
 `sm-margin`: 25% margin beneath an element. 
 
+`md-margin`: 50% margin beneath an element. 
+
 `lg-margin`: 100% margin beneath an element. 
 
 ## License
