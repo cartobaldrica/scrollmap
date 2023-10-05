@@ -30,6 +30,9 @@ body{
 .left, .right-inline{
     display:inline-block;
 }
+.left{
+    vertical-align:top;
+}
 .half-width{
     width:50%;
 }
@@ -223,7 +226,6 @@ body{
     .right-inline{
         width: 41.66666667% !important;
         margin-left:20px;
-        position:absolute;
     }
 }
     @media screen and (min-width: 720px) and (max-width: 1199px) {
@@ -251,7 +253,6 @@ body{
         flex: 0 0 auto;
         margin-left:20px;
         width: 45% !important;
-        position:absolute;
     }
 
 }
@@ -274,7 +275,6 @@ body{
         flex: 0 0 auto;
         width: 48% !important;
         margin-left:10px;   
-        position:absolute;
     }
 }
 @media screen and (max-width: 539px) {

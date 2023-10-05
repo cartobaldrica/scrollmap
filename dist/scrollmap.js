@@ -22,6 +22,7 @@
         document.querySelectorAll('.full-width').forEach(div =>{
             div.parentNode.style.padding = 0;
         });
+        
     }
     //center title horizontally and vertically within page
     function positionTitle(){
@@ -42,11 +43,11 @@
     function vertCenter(){
         document.querySelectorAll('.vert-center').forEach(div =>{
             var height = div.clientHeight,
-                pHeight = div.parentNode.clientHeight;
+                pHeight = div.closest(".row").clientHeight;
 
-            console.log("calc(50% - " + (height/2) + ")")
+            console.log(div.closest(".row").clientHeight)
                 
-            div.style.marginTop = "calc(50% - " + height + "px)";
+            div.style.marginTop = (pHeight/2) - (height/2) + "px";
         });
     }
     //resize background elements
@@ -164,13 +165,14 @@
     //functions to fire on resize
     function resize(){
         rightPosition();
-        vertCenter();
         positionTitle();
         resizeBackround();
         backgroundTransition();
+        vertCenter();
     }
 
     document.addEventListener('DOMContentLoaded', resize);
+    document.addEventListener('load', vertCenter);
     document.addEventListener('scroll', vertCenter);
     window.addEventListener('resize', resize);
 
