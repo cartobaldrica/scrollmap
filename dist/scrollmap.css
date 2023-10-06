@@ -291,7 +291,7 @@ body{
         width: 100% !important;
     }
     .row{
-        margin-bottom:50%;
+        margin-bottom:50vh !important;
     }
     .foreground-item > .row{
         margin-bottom:100%;

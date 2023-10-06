@@ -1,6 +1,6 @@
 (function(){
     //calculate inline position of a right element 
-    function rightPosition(){
+    async function rightPosition(){
         document.querySelectorAll('.right').forEach(div =>{
             var children = div.parentNode.childNodes,
                 containsLeft;
@@ -22,7 +22,6 @@
         document.querySelectorAll('.full-width').forEach(div =>{
             div.parentNode.style.padding = 0;
         });
-        
     }
     //center title horizontally and vertically within page
     function positionTitle(){
@@ -44,8 +43,6 @@
         document.querySelectorAll('.vert-center').forEach(div =>{
             var height = div.clientHeight,
                 pHeight = div.closest(".row").clientHeight;
-
-            console.log(div.closest(".row").clientHeight)
                 
             div.style.marginTop = (pHeight/2) - (height/2) + "px";
         });
@@ -107,6 +104,7 @@
                 })
             }
         })
+
     }
     //slideshow functions
     document.querySelectorAll(".slideshow-container").forEach(function(slideshow){
@@ -163,16 +161,20 @@
     })
     
     //functions to fire on resize
+    async function onLoad(){
+        await rightPosition();
+
+        resize();
+    }
+
     function resize(){
-        rightPosition();
         positionTitle();
         resizeBackround();
         backgroundTransition();
         vertCenter();
     }
 
-    document.addEventListener('DOMContentLoaded', resize);
-    document.addEventListener('load', vertCenter);
+    window.onload = onLoad;
     document.addEventListener('scroll', vertCenter);
     window.addEventListener('resize', resize);
 
