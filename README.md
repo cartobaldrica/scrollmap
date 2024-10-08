@@ -16,7 +16,7 @@ These examples are from UW-Madison students who created storymaps using Scrollma
 
 [22, a map](https://jake-steinberg.github.io/portfolio/22map.html) by Jake Steinberg ([portfolio](https://jake-steinberg.github.io/portfolio/index.html))
 
-[Slippy Postal Map](https://sid-rcs.github.io/scrolly-map/) by Chinna Subbaraya Siddharth (Sid) Ramavajjala ([portfolio](https://sid-rcs.github.io/maps/))
+[Slippy Postal Map](https://sidrcs.github.io/scrolly-map/) by Chinna Subbaraya Siddharth (Sid) Ramavajjala ([portfolio](https://sidrcs.github.io/maps/))
 
 ## How to Use
 
