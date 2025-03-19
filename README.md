@@ -8,7 +8,7 @@ An HTML wrapper/lightweight javascript library for creating scrolling storymaps.
 
 ## Examples
 
-These examples are from UW-Madison students who created storymaps using Scrollmap in Fall 2022.
+These examples are from students who created storymaps using Scrollmap. Students were tasked to use Scrollmap to describe the creative process of creating basemaps, serving as both an explanation and an archive of their work.
 
 [Kiki's Delivery Service](https://smichalski3.github.io/portfolio/kikis-delivery.html) by Sophie Michalski ([portfolio](https://smichalski3.github.io/portfolio/index.html))
 
@@ -17,6 +17,10 @@ These examples are from UW-Madison students who created storymaps using Scrollma
 [22, a map](https://jake-steinberg.github.io/portfolio/22map.html) by Jake Steinberg ([portfolio](https://jake-steinberg.github.io/portfolio/index.html))
 
 [Slippy Postal Map](https://sidrcs.github.io/scrolly-map/) by Chinna Subbaraya Siddharth (Sid) Ramavajjala ([portfolio](https://sidrcs.github.io/maps/))
+
+[An Ode to Frank](https://helenasimina.github.io/Portfolio/portfolio/lisafrankmap.html) by Helen Tosteson ([portfolio](https://helenasimina.github.io/Portfolio/index.html))
+
+[Chagall's Firebird](https://cldennis.github.io/scrollmap/) by Christina Dennis ([portfolio](https://cldennis.github.io/))
 
 ## How to Use
 
