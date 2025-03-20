@@ -22,6 +22,8 @@ These examples are from students who created storymaps using Scrollmap. Students
 
 [Chagall's Firebird](https://cldennis.github.io/scrollmap/) by Christina Dennis ([portfolio](https://cldennis.github.io/))
 
+[Midnights Map](https://brynnpatrello.github.io/portfolio/portfolio/midnightsmap.html) by Brynn Patrello ([portfolio](https://brynnpatrello.github.io/portfolio/))
+
 ## How to Use
 
 ### Basics
